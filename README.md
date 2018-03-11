@@ -1,7 +1,7 @@
 ## Getting Started
 
 ```
-https://github.com/zachgoll/ethereum-nextjs-app.git
+git clone https://github.com/zachgoll/ethereum-nextjs-app.git
 cd ethereum-nextjs-app
 npm install
 npm run start
