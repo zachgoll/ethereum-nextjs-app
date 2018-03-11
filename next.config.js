@@ -3,7 +3,7 @@ module.exports = {
     // /Next-React-Components
     return {
       "/": { page: "/" },
-      "/campaigns/new": { page: "/newcampaign" }
+      "/campaigns/new": { page: "/campaigns/new" }
     };
   }
 };
