@@ -7,15 +7,13 @@ This deployment has been run and contract generated at
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
+const config = require("./config");
 
 // We do not need to import Campaign because all we need to deploy is the
 // factory.  The Factory will then deploy Campaigns on its own.
 const compiledFactory = require("./build/CampaignFactory.json");
 
-const provider = new HDWalletProvider(
-  "book decade bean book certain idea talk budget genuine search file supply",
-  "https://ropsten.infura.io/zG3wXpq3gtehekEheZ17"
-);
+const provider = new HDWalletProvider(config.seed, config.infura);
 
 const web3 = new Web3(provider);
 // Writing a function just so we can use async/await since this requires a functionc
