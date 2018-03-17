@@ -7,13 +7,13 @@ This deployment has been run and contract generated at
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const Web3 = require("web3");
-const config = require("./config");
+import { infura, seed } from '../env';
 
 // We do not need to import Campaign because all we need to deploy is the
 // factory.  The Factory will then deploy Campaigns on its own.
 const compiledFactory = require("./build/CampaignFactory.json");
 
-const provider = new HDWalletProvider(config.seed, config.infura);
+const provider = new HDWalletProvider(seed, infura);
 
 const web3 = new Web3(provider);
 // Writing a function just so we can use async/await since this requires a functionc

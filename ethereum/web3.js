@@ -1,4 +1,5 @@
 import Web3 from "web3";
+import { infura } from '../env';
 
 let web3;
 
@@ -15,7 +16,7 @@ if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
 } else {
   // We are on the server or user not running Metamask
   const provider = new Web3.providers.HttpProvider(
-    process.env.INFURA
+    infura
   );
 
   web3 = new Web3(provider);
