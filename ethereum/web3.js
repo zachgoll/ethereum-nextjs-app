@@ -15,7 +15,7 @@ if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
 } else {
   // We are on the server or user not running Metamask
   const provider = new Web3.providers.HttpProvider(
-    "https://ropsten.infura.io/zG3wXpq3gtehekEheZ17"
+    process.env.INFURA
   );
 
   web3 = new Web3(provider);
